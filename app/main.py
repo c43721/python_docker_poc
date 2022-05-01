@@ -10,3 +10,6 @@ app = FastAPI(openapi_url=None)
 app.include_router(settings.router)
 app.include_router(containers.router)
 
+@app.get("/")
+def root():
+    return {"message": "Hello from Root!d"}
