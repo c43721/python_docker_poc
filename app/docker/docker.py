@@ -6,3 +6,6 @@ class DockerService:
 
     def get_client(self):
         return self.client
+
+    def get_all_running_containers(self):
+        return self.client.containers.list()
