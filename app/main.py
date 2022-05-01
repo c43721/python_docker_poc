@@ -1,14 +1,14 @@
 from fastapi import FastAPI
 
-from app.docker.docker import DockerService
+from app.settings import router
 
-from . import settings
-from . import containers
+from .settings import SettingsRouter
+from .docker import ContainersRouter
 
 app = FastAPI(openapi_url=None)
 
-app.include_router(settings.router)
-app.include_router(containers.router)
+app.include_router(SettingsRouter)
+app.include_router(ContainersRouter)
 
 @app.get("/")
 def root():
