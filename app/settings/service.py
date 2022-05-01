@@ -1,6 +1,8 @@
 from json import load, dumps, JSONDecodeError
 
 class SettingsService:
+    settings: dict = None
+
     def __init__(self):
         self.settings = self.get_settings()
 

@@ -10,6 +10,6 @@ def settings(settings: SettingsService = Depends()):
 
 @router.put("/")
 def post_settings(new_settings: dict, settings: SettingsService = Depends()):
-    settings = settings.write_settings(new_settings)
+    settings.write_settings(new_settings)
 
-    return settings
+    return new_settings
