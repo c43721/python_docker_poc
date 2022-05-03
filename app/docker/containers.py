@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
 
-from app.docker.service import DockerService
+from service import DockerService
 
 router = APIRouter(prefix="/containers")
 

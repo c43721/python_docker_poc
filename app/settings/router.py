@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
 
-from app.settings import SettingsService
+from settings import SettingsService
 
 router = APIRouter(prefix="/settings")
 
