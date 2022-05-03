@@ -22,9 +22,7 @@ class SettingsService:
                 self.settings = settings
 
                 return settings 
-        except FileNotFoundError:
-            return dict()
-        except JSONDecodeError:
+        except (FileNotFoundError, JSONDecodeError):
             return dict()
 
     def write_settings(self, new_settings: dict):
